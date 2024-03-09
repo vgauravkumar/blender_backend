@@ -1,16 +1,16 @@
+const arr = [
+    {
+        file_name: "box.glb"
+    },
+    // {
+    //     file_name: "torus.glb"
+    // },
+    // {
+    //     file_name: "monkey.glb"
+    // }
+];
 const getModels = async (req, res) => {
     try {
-        const arr = [
-            {
-                file_name: "box.glb"
-            },
-            {
-                file_name: "torus.glb"
-            },
-            // {
-            //     file_name: "monkey.glb"
-            // }
-        ];
         return res.status(200).json({
             message: "success",
             arr
@@ -22,5 +22,6 @@ const getModels = async (req, res) => {
 };
 
 module.exports = {
-    getModels
+    getModels,
+    arr
 }
