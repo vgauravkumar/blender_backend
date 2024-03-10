@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const { generateModel } = require('../controller/generateModel');
+const { createCube, changeSize, changePosition } = require('../controller/scripts');
 const { getModels } = require('../controller/getModels');
 
 router.get('/models', getModels);
-router.get('/generate-model', generateModel);
+router.get('/createCube', createCube);
+router.put('/changeSize', changeSize);
+router.put('/changePosition', changePosition);
 
 module.exports = router;
